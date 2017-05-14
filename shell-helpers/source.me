@@ -1,0 +1,9 @@
+# Source this file to get a function named `cb` that allows us to copy the
+# password field to the clipboard
+
+# How to source it?:
+# source source.me
+
+BASE=$(pwd)
+
+cb(){ cab get $1 | $BASE/grep-field.sh | $BASE/clipboard.sh } 
